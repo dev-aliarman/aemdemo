@@ -374,6 +374,14 @@ header nav .nav-tools button.nav-wishlist-button {
   position: relative;
 }
 
+header nav .nav-tools button.nav-store-button {
+  background-image: url('../../icons/store.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: contain;
+}
+
 header nav .nav-tools button.nav-search-button {
   font-size: 0;
   background-image: url('../../icons/search.svg');

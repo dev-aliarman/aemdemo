@@ -34,6 +34,8 @@ export function renderAuthDropdown(navTools) {
       <div id="auth-dropin-container"></div>
       <ul class="authenticated-user-menu">
          <li><a href="${rootLink('/customer/account')}">My Account</a></li>
+          <li><button>Account Menu 1</button></li>
+           <li><button>Account Menu 1</button></li>
           <li><button>Logout</button></li>
       </ul>
     </div>
@@ -91,7 +93,7 @@ export function renderAuthDropdown(navTools) {
     if (isAuthenticated || getUserTokenCookie) {
       authDropDownMenuList.style.display = 'block';
       authDropinContainer.style.display = 'none';
-      loginButton.textContent = `Hi, ${getUserNameCookie}`;
+      loginButton.textContent = `Hello, ${getUserNameCookie}`;
     } else {
       authDropDownMenuList.style.display = 'none';
       authDropinContainer.style.display = 'block';

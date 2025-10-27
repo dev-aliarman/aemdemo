@@ -218,15 +218,30 @@ export default async function decorate(block) {
      </div>
    `);
 
+  /** Store */
+  const stores = document.createRange().createContextualFragment(`
+     <div class="store-wrapper nav-tools-wrapper">
+       <button type="button" class="nav-store-button" aria-label="Stores"></button>
+       <div class="store-panel nav-tools-panel"></div>
+     </div>
+   `);
+
   navTools.append(wishlist);
+  navTools.append(stores);
 
   const wishlistButton = navTools.querySelector('.nav-wishlist-button');
+  const storeButton = navTools.querySelector('.nav-store-button');
 
   const wishlistMeta = getMetadata('wishlist');
+  const storeslistMeta = getMetadata('stores');
   const wishlistPath = wishlistMeta ? new URL(wishlistMeta, window.location).pathname : '/wishlist';
+  const storeslistPath = storeslistMeta ? new URL(storeslistMeta, window.location).pathname : '/stores';
 
   wishlistButton.addEventListener('click', () => {
     window.location.href = rootLink(wishlistPath);
+  });
+  storeButton.addEventListener('click', () => {
+    window.location.href = rootLink(storeslistPath);
   });
 
   /** Mini Cart */
