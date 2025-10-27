@@ -1,6 +1,22 @@
 {
   "blocks": [
     {
+      "name": "highlight",
+      "title": "Highlight",
+      "description": "Simple highlight box for important content",
+      "category": "Content",
+      "icon": "https://www.aem.live/default-theme/icons/info.svg",
+      "path": "/blocks/highlight/highlight"
+    },
+    {
+      "name": "quote",
+      "title": "Quote",
+      "description": "Blockquote with author attribution",
+      "category": "Content",
+      "icon": "https://www.aem.live/default-theme/icons/quote.svg",
+      "path": "/blocks/quote/quote"
+    },
+    {
       "name": "productcard",
       "title": "Product Card",
       "description": "Displays product information in a card format",

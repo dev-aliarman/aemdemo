@@ -1,0 +1,28 @@
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.highlight .highlight-row {
+  margin-bottom: 1rem;
+}
+
+.highlight .highlight-row:last-child {
+  margin-bottom: 0;
+}
+
+.highlight h1,
+.highlight h2,
+.highlight h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.highlight p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

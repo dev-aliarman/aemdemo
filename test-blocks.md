@@ -1,18 +1,36 @@
-# Test Product Card Block
+# Test Simple Content Blocks
 
-## Manual Block Test
+## Simple Highlight Block Test
+
+highlight
+
+| This is a highlighted message! |
+| Important information goes here |
+
+---
+
+## Simple Quote Block Test
+
+quote
+
+| Life is what happens when you're busy making other plans | John Lennon |
+
+---
+
+## Product Card Block Test
 
 productcard
 
 | Image | Name | Price | Description | Badge | Rating |
 |-------|------|-------|-------------|-------|--------|
 | ![Product 1](https://via.placeholder.com/300) | [Sample Product](/product-1) | $29.99 | Great product description | Sale | 4.5 |
-| ![Product 2](https://via.placeholder.com/300) | [Another Product](/product-2) | $39.99 | Another product description | New | 5 |
 
 ---
 
-product-card
+## Testing Manual Block Names
 
-| Image | Name | Price | Description | Badge | Rating |
-|-------|------|-------|-------------|-------|--------|
-| ![Product 3](https://via.placeholder.com/300) | [Third Product](/product-3) | $49.99 | Third product description | Featured | 4 |
+Type these directly in DA.live editor:
+
+- `highlight`
+- `quote` 
+- `productcard`

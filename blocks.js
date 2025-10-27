@@ -2,6 +2,20 @@ export default function buildLibrary() {
   return {
     blocks: [
       {
+        name: 'highlight',
+        title: 'Highlight',
+        description: 'Simple highlight box for important content',
+        category: 'Content',
+        icon: 'info',
+      },
+      {
+        name: 'quote',
+        title: 'Quote',
+        description: 'Blockquote with author attribution',
+        category: 'Content',
+        icon: 'quote',
+      },
+      {
         name: 'productcard',
         title: 'Product Card',
         description: 'Displays product information in a card format',
