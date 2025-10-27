@@ -7,7 +7,7 @@
       "id": "library",
       "title": "Block Library",
       "environments": ["edit"],
-      "url": "/.helix/block-library.json",
+      "url": "/block-library.json",
       "isPalette": true
     }
   ]
