@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "org": "dev-aliarman",
+  "repo": "aemdemo",
+  "contentSourceUrl": "https://content.da.live/dev-aliarman/aemdemo/",
+  "contentSourceType": "onedrive",
+  "owner": "dev-aliarman",
+  "site": "aemdemo",
+  "host": "main--aemdemo--dev-aliarman.aem.live",
+  "previewHost": "main--aemdemo--dev-aliarman.aem.page",
+  "gitUrl": "https://github.com/dev-aliarman/aemdemo",
+  "fstab": {
+    "mountpoints": {
+      "/": {
+        "url": "https://content.da.live/dev-aliarman/aemdemo/",
+        "type": "markup"
+      }
+    },
+    "folders": {
+      "/products/": "/products/default"
+    }
+  },
+  "sidekick": {
+    "project": "AEM Demo - dev-aliarman",
+    "editUrlLabel": "Document Authoring",
+    "editUrlPattern": "https://da.live/edit#/dev-aliarman/aemdemo{{pathname}}",
+    "plugins": [
+      {
+        "id": "library",
+        "title": "Block Library",
+        "environments": ["edit"],
+        "url": "/block-library.json",
+        "isPalette": true
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "name": "simple-card",
+      "title": "Simple Card",
+      "description": "A simple card block for displaying content",
+      "path": "/blocks/simple-card/simple-card.js",
+      "css": "/blocks/simple-card/simple-card.css"
+    },
+    {
+      "name": "hero",
+      "title": "Hero",
+      "description": "A hero banner block for landing pages",
+      "path": "/blocks/hero/hero.js",
+      "css": "/blocks/hero/hero.css"
+    },
+    {
+      "name": "highlight",
+      "title": "Highlight",
+      "description": "A block for highlighting important content",
+      "path": "/blocks/highlight/highlight.js"
+    }
+  ]
+}

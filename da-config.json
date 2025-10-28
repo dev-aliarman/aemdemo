@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "org": "dev-aliarman",
+  "repo": "aemdemo",
+  "contentSource": {
+    "url": "https://content.da.live/dev-aliarman/aemdemo/",
+    "type": "onedrive"
+  },
+  "code": {
+    "owner": "dev-aliarman",
+    "repo": "aemdemo",
+    "source": {
+      "type": "github",
+      "url": "https://github.com/dev-aliarman/aemdemo"
+    }
+  },
+  "cdn": {
+    "live": {
+      "host": "main--aemdemo--dev-aliarman.aem.live"
+    },
+    "preview": {
+      "host": "main--aemdemo--dev-aliarman.aem.page"
+    }
+  },
+  "plugins": [
+    {
+      "id": "library",
+      "title": "Block Library",
+      "environments": ["edit"],
+      "url": "/block-library.json",
+      "isPalette": true
+    }
+  ]
+}
