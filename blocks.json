@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "name": "simple-card",
+      "title": "Simple Card",
+      "description": "A simple card block"
+    },
+    {
+      "name": "testblock", 
+      "title": "Test Block",
+      "description": "Test block for verification"
+    }
+  ]
+}
