@@ -1,7 +1,7 @@
 {
-  "project": "My Project",
+  "project": "AEM Demo - dev-aliarman",
   "editUrlLabel": "Document Authoring",
-  "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
+  "editUrlPattern": "https://da.live/edit#/dev-aliarman/aemdemo{{pathname}}",
   "plugins": [
     {
       "id": "library",
