@@ -16,16 +16,37 @@ fs.mkdirSync(dropinsDir, { recursive: true });
 
 // Copy specified files from node_modules/@dropins to scripts/__dropins__
 fs.readdirSync('node_modules/@dropins', { withFileTypes: true }).forEach((file) => {
+  const sourceDir = path.join('node_modules', '@dropins', file.name);
+  const destDir = path.join(dropinsDir, file.name);
   // Skip if package is not in package.json dependencies / skip devDependencies
   if (!dependencies[`@dropins/${file.name}`]) {
     return;
   }
 
-  // Skip if is not folder
-  if (!file.isDirectory()) {
+  // Check if it's a directory or symbolic link pointing to a directory
+  let isValidTarget = false;
+  if (file.isDirectory()) {
+    isValidTarget = true;
+  } else if (file.isSymbolicLink()) {
+    try {
+      const realPath = fs.realpathSync(sourceDir);
+      const stats = fs.statSync(realPath);
+      if (stats.isDirectory()) {
+        isValidTarget = true;
+        // eslint-disable-next-line no-console
+        console.log(`🔎 Found symbolic link ${file.name} pointing to directory ${realPath}`);
+      }
+    } catch (error) {
+      console.warn(`⚠️ Warning: Could not resolve symbolic link ${file.name}:`, error.message);
+    }
+  }
+
+  // Skip if not a directory or valid symbolic link to directory
+  if (!isValidTarget) {
     return;
   }
-  fs.cpSync(path.join('node_modules', '@dropins', file.name), path.join(dropinsDir, file.name), {
+
+  fs.cpSync(sourceDir, destDir, {
     recursive: true,
     filter: (src) => (!src.endsWith('package.json')),
   });
