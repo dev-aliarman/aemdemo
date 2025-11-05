@@ -1,5 +1,7 @@
 // Drop-in Tools
 import { events } from '@dropins/tools/event-bus.js';
+import ThemeChange from '@dropins/theme-switcher/containers/ThemeContainer.js';
+import { render as themeRender } from '@dropins/theme-switcher/render.js';
 
 import { tryRenderAemAssetsImage } from '@dropins/tools/lib/aem/assets.js';
 import { getMetadata } from '../../scripts/aem.js';
@@ -228,6 +230,17 @@ export default async function decorate(block) {
 
   navTools.append(wishlist);
   navTools.append(stores);
+
+  const themeSwitcher = document.createRange().createContextualFragment(`
+     <div class="theme-switcher-wrapper nav-tools-wrapper">
+       <div class="theme-switcher-container"></div>
+     </div>
+   `);
+
+  navTools.append(themeSwitcher);
+
+  const themeContainer = navTools.querySelector('.theme-switcher-container');
+  themeRender.render(ThemeChange)(themeContainer);
 
   const wishlistButton = navTools.querySelector('.nav-wishlist-button');
   const storeButton = navTools.querySelector('.nav-store-button');

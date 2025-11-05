@@ -778,3 +778,64 @@ li
   max-width: 15rem;
   max-height: 15rem;
 }
+
+.theme-switcher-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.theme-switcher-container {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher-wrapper .theme-switcher-button {
+  background: none;
+  border: 1px solid var(--color-neutral-300, #d1d5db);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text, #333);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.theme-switcher-wrapper .theme-switcher-button:hover {
+  background-color: var(--color-neutral-100, #f3f4f6);
+  border-color: var(--color-primary-500, #3b82f6);
+}
+
+.theme-switcher-wrapper .theme-switcher-button:focus {
+  outline: 2px solid var(--color-primary-500, #3b82f6);
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .theme-switcher-wrapper .theme-switcher-button {
+  border-color: var(--color-neutral-600, #4b5563);
+  color: var(--color-neutral-100, #f3f4f6);
+  background-color: var(--color-neutral-800, #1f2937);
+}
+
+[data-theme="dark"] .theme-switcher-wrapper .theme-switcher-button:hover {
+  background-color: var(--color-neutral-700, #374151);
+  border-color: var(--color-primary-400, #60a5fa);
+}
+
+@media (max-width: 900px) {
+  .theme-switcher-wrapper {
+    margin: 8px 0;
+    order: -1;
+  }
+  
+  .theme-switcher-wrapper .theme-switcher-button {
+    width: 100%;
+    min-width: auto;
+  }
+}
